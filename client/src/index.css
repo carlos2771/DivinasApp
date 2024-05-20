@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* #roof {
+  font-family: Carmorant Garamond, serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #fdf2f8;
+}
+
+/* #root {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  max-height: 720px;
+} */
