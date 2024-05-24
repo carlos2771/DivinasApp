@@ -1,4 +1,7 @@
 import Producto  from "../models/producto.models.js";
+import multer from "multer";
+import fs from "fs";
+import sharp from 'sharp';
 
 export const getProductos = async (req, res) =>{
 
@@ -12,25 +15,57 @@ export const getProductos = async (req, res) =>{
         console.log(error, "error al encontrar los datos");
     }
 }
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      const uploadDir = "./uploads";
+      // Crea el directorio si no existe
+      if (!fs.existsSync(uploadDir)) {
+        fs.mkdirSync(uploadDir);
+      }
+      cb(null, uploadDir);
+    },
+    filename: function (req, file, cb) {
+      console.log(file);
+      cb(null, `${Date.now()}-${file.originalname}`);
+    },
+  });
+  
+  const upload = multer({ storage: storage });
+  
+  
+  const uploadMiddleware = () => upload.single("img");
+  
+  export default uploadMiddleware;
 
+  export const createProductos = async (req, res) => {
+    try {
+      const { nombre, descripcion, precio, tipo, marca} = req.body;
+      if (!req.file) {
+        return res.status(400).json({ message: 'No se ha subido ninguna imagen' });
+      }
+      const imgPath = req.file.path;
+    
+      console.log(imgPath)
 
-export const createProducto = async (req, res) => {
-   try {
-     const {nombre, descripcion, precio, tipo} = req.body
-
-     console.log("lo que se guardo",req.body);
-
-
-     const newProducto = new Producto({
-         nombre, descripcion, precio, tipo
-     })
- 
-     const saveProducto = await newProducto.save()
-     res.status(201).json(saveProducto)
-   } catch (error) {
-    console.log("error al crear",error);
-   }
-}
+      // Redimensiona la imagen a un tamaño específico (por ejemplo, 300x300)
+      const resizedImageBuffer = await sharp(imgPath)
+        .resize({ width: 300, height: 300 })
+        .toBuffer();
+  
+      // Convierte la imagen redimensionada a base64
+      const base64Image = resizedImageBuffer.toString('base64');
+  
+      const newProducto = new Producto({
+        nombre, descripcion, precio, tipo, marca, img: base64Image
+      });
+  
+      const saveProducto = await newProducto.save();
+      res.status(201).json(saveProducto);
+    } catch (error) {
+      console.log("Error al crear el producto:", error);
+      res.status(500).json({ message: 'Error al crear el producto' });
+    }
+  };
 
 export const getProducto = async (req, res) =>{
     try{
