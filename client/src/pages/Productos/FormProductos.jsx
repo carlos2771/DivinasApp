@@ -54,7 +54,7 @@ export default function FormProductos() {
           <input type="file" {...register("img")} />
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center bg-red-700">
           <input  type="submit" />
         </div>
       </form>
