@@ -39,7 +39,7 @@ export default function Navbar() {
               onMouseEnter={() => setIsMenuOpen(true)}
               onMouseLeave={closeMenu}
             >
-              <li className="text-letras hover:underline"> <Link>Cabello </Link></li>
+              <li className="text-letras hover:underline"> <Link to={"/productos"}>Cabello </Link></li>
               <li className="text-letras hover:underline"> <Link>Belleza </Link></li>
               <li className="text-letras hover:underline"> <Link> Uñas</Link></li>
             </ul>

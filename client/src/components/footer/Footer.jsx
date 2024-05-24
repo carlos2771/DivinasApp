@@ -24,8 +24,8 @@ export default function Footer() {
           <div className="">
             <h1 className="text-2xl  text-letras">Ubicacion </h1>
             <div className="">
-              <p className="text-letras text-lg">Plaza Botero, Av. Carabobo,<br/> La Candelaria,
-                 Medellín, La Candelaria,<br/> Medellín, Antioquia, Colombia</p>
+              <p className="text-letras text-lg">Cra. 52 #51-52<br/> La Candelaria,
+                 Medellín, La Candelaria,Medellin <br/> Antioquia</p>
              
             </div>
 

@@ -1,5 +1,7 @@
 import ImageGallery from "react-image-gallery";
 import Uñas from "../../assets/img/Uñas/uñas1.jpeg"
+import Uñas2 from "../../assets/img/Uñas/uñas2.jpeg" 
+import Uñas3 from "../../assets/img/Uñas/uñas3.jpeg" 
 import "react-image-gallery/styles/css/image-gallery.css";
 import { useServicios } from "../../hooks/useServicios";
 import { useState } from "react";
@@ -34,15 +36,15 @@ export default function ImagenesServicios() {
           [
             {
                 original: Uñas,
-                thumbnail: "https://i.pinimg.com/736x/21/d4/3e/21d43ed84b6ffbeec3fb544756f7ce79.jpg"
+                thumbnail: Uñas
             },
             {
-                original: "https://mujersaludable10.com/wp-content/uploads/2021/10/unas-jovenes-e1633544468749.jpg",
-                thumbnail: "https://mujersaludable10.com/wp-content/uploads/2021/10/unas-jovenes-e1633544468749.jpg"
+                original: Uñas2,
+                thumbnail: Uñas2
             },
             {
-                original: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMyNJloChKKIv3KxLOorvcTIYoJbbgwHwRD7mxL3k-XzV1Lckmgkf7VEwIFC8OZKApVFQ&usqp=CAU",
-                thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMyNJloChKKIv3KxLOorvcTIYoJbbgwHwRD7mxL3k-XzV1Lckmgkf7VEwIFC8OZKApVFQ&usqp=CAU"
+                original: Uñas3,
+                thumbnail: Uñas3
             },
         ],)
     }else{
