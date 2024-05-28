@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <div className="bg-primary sticky top-0 z-50">
-      <nav className="flex items-center justify-between w-full px-60 relative">
+      <nav className="flex items-center justify-between w-full px-60 relative ">
         <div className="ml-24 space-x-24">
           <Link to="/" className="text-letras hover:underline">Inicio</Link>
           <a onClick={scrollToFooter} className="text-letras hover:underline cursor-pointer">Nosotros</a>
