@@ -28,7 +28,7 @@ export default function Navbar() {
         </div>
     
         <div className="flex items-center justify-center">
-          <img className="h-20 w-22" src="https://scontent.feoh1-1.fna.fbcdn.net/v/t39.30808-6/438712058_122111272034269953_5054094984923943878_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG3EuXLZYKqQ4wDNvRSrK7CVRqutw6Roe5VGq63DpGh7lgNfmG9gxYCnU4CTiw5aSymvcu9bOqmsIIzE8Gq0RBk&_nc_ohc=Ew-OFSJLfAEQ7kNvgEpEUkD&_nc_ht=scontent.feoh1-1.fna&oh=00_AYCMj71eeyUz_-fmR9zFAvpO0C1X6kXZHQVmCr1a5YYPrA&oe=664C39C6" alt="Logo" />
+          <img className="h-20 w-22" src="https://scontent.feoh1-1.fna.fbcdn.net/v/t39.30808-6/438712058_122111272034269953_5054094984923943878_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG3EuXLZYKqQ4wDNvRSrK7CVRqutw6Roe5VGq63DpGh7lgNfmG9gxYCnU4CTiw5aSymvcu9bOqmsIIzE8Gq0RBk&_nc_ohc=q-EdxYRQaNsQ7kNvgGm0L5t&_nc_ht=scontent.feoh1-1.fna&oh=00_AYDeh1Tacc3EqFMAhYjwp3ecTJY_GX2vBmdv11OKERA9nA&oe=665D9586" alt="Logo" />
         </div>
 
         <div className="mr-24 space-x-24 relative">
@@ -39,9 +39,10 @@ export default function Navbar() {
               onMouseEnter={() => setIsMenuOpen(true)}
               onMouseLeave={closeMenu}
             >
-              <li className="text-letras hover:underline"> <Link to={"/productos"}>Cabello </Link></li>
-              <li className="text-letras hover:underline"> <Link>Belleza </Link></li>
-              <li className="text-letras hover:underline"> <Link> Uñas</Link></li>
+              <li className="text-letras hover:underline"> <Link to={"/productosCabello"}>Cabello </Link></li>
+              <li className="text-letras hover:underline"> <Link to={"/productosBelleza"}>Belleza </Link></li>
+              <li className="text-letras hover:underline"> <Link to={"/productosUñas"}> Uñas</Link></li>
+              <li className="text-letras hover:underline"> <Link to={"/Formulario"}> Formulario</Link></li>
             </ul>
           )}
           <Link to="servicios" className="text-letras hover:underline">Servicios</Link>

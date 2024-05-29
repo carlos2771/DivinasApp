@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { useProductos } from "../../hooks/useProductos";
+import { useEffect, useState } from "react"
+import { useProductos } from "../../hooks/useProductos"
 
-export default function ProductosPage() {
-  const { productos, getProductos } = useProductos();
+export default function ProductosUñasPage() {
+    const { productos, getProductos } = useProductos();
   const [busqueda, setBusqueda] = useState("");
   const [productosFiltrados, setProductosFiltrados] = useState([]);
 
@@ -31,7 +31,7 @@ export default function ProductosPage() {
         />
       </div>
       <div className="flex justify-around flex-wrap pl-80 pr-80 pt-10 gap-10 py-80 ">
-        {productosFiltrados.filter(producto => producto.tipo === "Cabello").map((producto) => (
+        {productosFiltrados.filter(producto => producto.tipo === "Uñas").map((producto) => (
           <div key={producto._id} className="">
             <div className="relative max-w-xs overflow-hidden rounded-2xl shadow-lg group">
               <img
@@ -51,6 +51,7 @@ export default function ProductosPage() {
           </div>
         ))}
       </div>
+      
     </div>
   );
 }

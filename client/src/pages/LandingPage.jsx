@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../App.css"
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 export default function LandingPage() {
   const [isVibrating, setVibrating] = useState(false);
 

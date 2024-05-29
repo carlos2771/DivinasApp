@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 export default function Footer() {
   return (
-    <div>
+    <div className="">
       <footer id="footer">
-        <div className="bg-primary flex justify-around pt-5 ">
+        <div className="bg-primary flex justify-around pt-5  ">
           <div className="">
             <h1 className="text-2xl  text-letras">Horarios de atención </h1>
             <div className="flex ">

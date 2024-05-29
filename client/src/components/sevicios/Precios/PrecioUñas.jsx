@@ -1,62 +1,28 @@
 
 export default function PrecioUñas() {
   return (
-    <div className="flex gap-80 text-xl">
-
-    <div className=" text-parrafo flex-col">
-        
-        <div className="pt-10">
-            <p>Manicure</p>
-          
+    <div className="bg-gray-100 py-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              "Manicure",
+              "Pedicure",
+              "Limar",
+              "Pintar",
+              "Pulir",
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-lg transition transform hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <p className="text-xl text-gray-700">{service}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="pt-10">
-            <p>Pedicure</p>
-          
-        </div>
-    
-        <div className="pt-10">
-            <p>Limar</p>
-        
-        </div>
-        <div className="pt-10">
-            <p>Pintar</p>
-           
-        </div>
-        <div className="pt-10">
-            <p>Pulir</p>
-            
-        </div>
-      
-    </div>
-    <div className=" text-parrafo flex-col">
-        
-        <div className="pt-10">
-            
-            <p>1000.000$</p>
-        </div>
-        <div className="pt-10">
-            
-            <p>1000.000$</p>
-        </div>
-    
-        <div className="pt-10">
-         
-            <p>1000.000$</p>
-        </div>
-        <div className="pt-10">
-           
-            <p>1000.000$</p>
-        </div>
-        <div className="pt-10">
-         
-            <p>1000.000$</p>
-        </div>
-      
-    </div>
-    
-       
+      </div>
           
 
-    </div>
+
   )
 }

@@ -2,6 +2,17 @@ import ImageGallery from "react-image-gallery";
 import Uñas from "../../assets/img/Uñas/uñas1.jpeg"
 import Uñas2 from "../../assets/img/Uñas/uñas2.jpeg" 
 import Uñas3 from "../../assets/img/Uñas/uñas3.jpeg" 
+
+import c1 from "../../assets/img/Cabellos/1.jpeg"
+import c2 from "../../assets/img/Cabellos/2.jpeg"
+import c3 from "../../assets/img/Cabellos/3.jpeg"
+import c4 from "../../assets/img/Cabellos/4.jpeg"
+import c5 from "../../assets/img/Cabellos/5.jpeg"
+
+import b1 from "../../assets/img/Belleza/1.jpeg"
+import b2 from "../../assets/img/Belleza/2.jpeg"
+import b3 from "../../assets/img/Belleza/3.jpeg"
+
 import "react-image-gallery/styles/css/image-gallery.css";
 import { useServicios } from "../../hooks/useServicios";
 import { useState } from "react";
@@ -15,17 +26,26 @@ export default function ImagenesServicios() {
   useEffect(() => {
     if (subRaya === "Cabello") {
         setTipoServicio( [
-            {
-            original: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYIYjQ_rtIISBLT3VWBk7rRR9LSWktidoByKo6EjYVeQ&s",
-            thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYIYjQ_rtIISBLT3VWBk7rRR9LSWktidoByKo6EjYVeQ&s"
-        },
-            {
-            original: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxOFab21VWlPcgCYjftVSQYnUakVeIdFMiIqWA9t4Mg&s",
-            thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxOFab21VWlPcgCYjftVSQYnUakVeIdFMiIqWA9t4Mg&s"
+      
+        {
+            original: c1,
+            thumbnail: c1
         },
         {
-            original: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzJVc5_dOH7vTIP1eW5ccnhz2C35YY7xpUw4PoUnMkfA&s",
-            thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzJVc5_dOH7vTIP1eW5ccnhz2C35YY7xpUw4PoUnMkfA&s"
+            original: c2,
+            thumbnail: c2
+        },
+        {
+            original: c3,
+            thumbnail: c3
+        },
+        {
+            original: c4,
+            thumbnail: c4
+        },
+        {
+            original: c5,
+            thumbnail: c5
         },
       
           
@@ -51,25 +71,26 @@ export default function ImagenesServicios() {
         setTipoServicio( 
             [
                 {
-                    original: "https://img.freepik.com/foto-gratis/esteticista-clienta-salon-rutina-cuidado-facial_23-2148875460.jpg?size=626&ext=jpg&ga=GA1.1.1687694167.1715126400&semt=ais",
-                    thumbnail: "https://img.freepik.com/foto-gratis/esteticista-clienta-salon-rutina-cuidado-facial_23-2148875460.jpg?size=626&ext=jpg&ga=GA1.1.1687694167.1715126400&semt=ais"
-                },
-             
-                {
-                    original: "https://st4.depositphotos.com/3514613/38371/i/450/depositphotos_383717932-stock-photo-doctor-beautician-cleanses-the-skin.jpg",
-                    thumbnail: "https://st4.depositphotos.com/3514613/38371/i/450/depositphotos_383717932-stock-photo-doctor-beautician-cleanses-the-skin.jpg"
+                    original: b1,
+                    thumbnail: b1
                 },
                 {
-                    original: "https://img.freepik.com/foto-gratis/joven-hermosa-mujer-sonriente-parches-debajo-ojos_158538-19021.jpg?size=626&ext=jpg&ga=GA1.1.1788068356.1715817600&semt=ais_user",
-                    thumbnail: "https://img.freepik.com/foto-gratis/joven-hermosa-mujer-sonriente-parches-debajo-ojos_158538-19021.jpg?size=626&ext=jpg&ga=GA1.1.1788068356.1715817600&semt=ais_user"
+                    original: b2,
+                    thumbnail: b2
                 },
+                {
+                    original: b3,
+                    thumbnail: b3
+                },
+              
+                
              
         ],)
     }
   }, [subRaya]);
 
   return (
-    <div className="flex justify-center mb-10 ">
+    <div className="flex justify-center mb-10  ">
         
       <ImageGallery
         showPlayButton={false}
@@ -80,7 +101,7 @@ export default function ImagenesServicios() {
         slideInterval={2000}
         thumbnailPosition="bottom"
         items={tipoServicios}
-       
+      
       />
     </div>
   );
