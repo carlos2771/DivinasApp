@@ -32,7 +32,7 @@ export default function LandingPage() {
           tu rutina de cuidado personal. En nuestro servicio de skincare,
           fusionamos lo mejor de la naturaleza y la ciencia para brindarte una
           piel radiante y saludable. ¡Únete a nosotros y embárcate en un viaje
-          hacia una belleza que se siente y se ve increíblemente bien!
+          hacia una belleza que se siente y se ve increíblemente bien
         </p>
 
         <div className="flex justify-center mb-10 mt-12">
