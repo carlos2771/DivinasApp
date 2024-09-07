@@ -42,7 +42,6 @@ export default function Navbar() {
               <li className="text-letras hover:underline"> <Link to={"/productosCabello"}>Cabello </Link></li>
               <li className="text-letras hover:underline"> <Link to={"/productosBelleza"}>Belleza </Link></li>
               <li className="text-letras hover:underline"> <Link to={"/productosUñas"}> Uñas</Link></li>
-              <li className="text-letras hover:underline"> <Link to={"/Formulario"}> Formulario</Link></li>
             </ul>
           )}
           <Link to="servicios" className="text-letras hover:underline">Servicios</Link>
