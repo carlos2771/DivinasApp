@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import 'dotenv/config'
 
 export const connectDB = async () => {
-    const URI = process.env.URI || `mongodb+srv://admin:admin@cluster0.49jaesh.mongodb.net/divinas`
+    const URI = process.env.URI 
     try {
     mongoose.connect(URI)
     console.log("conexion exitosa👽");
